@@ -1,0 +1,41 @@
+.ReactModal__Overlay {
+  margin-top: -80%;
+  opacity: 0;
+  transition: margin-top 500ms, opacity 300ms;
+}
+
+.ReactModal__Overlay--after-open {
+  margin-top: 0%;
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  margin-top: -80%;
+  opacity: 0;
+}
+
+@media (max-width: 600px) {
+  .ReactModal__Overlay {
+    margin-bottom: -80%;
+    opacity: 0;
+    transition: margin-bottom 500ms, opacity 300ms;
+  }
+
+  .ReactModal__Overlay--after-open {
+    margin-bottom: 0%;
+    opacity: 1;
+  }
+
+  .ReactModal__Overlay--before-close {
+    margin-bottom: -80%;
+    opacity: 0;
+  }
+
+  .react-modal-overlay {
+    align-items: flex-end !important;
+  }
+
+  .react-modal-content {
+    padding: 1rem !important;
+  }
+}
