@@ -7,7 +7,7 @@ import {
 } from 'react';
 import { api } from '../services/api';
 
-interface Transaction {
+export interface Transaction {
   _id: number;
   title: string;
   amount: number;
