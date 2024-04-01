@@ -2,7 +2,7 @@ import { Container, SummaryContainer } from './styles';
 import arrowCircleUpRegular from '../../assets/arrow-circle-up-regular.svg';
 import arrowCircleDownRegular from '../../assets/arrow-circle-down-regular.svg';
 import currencyDollarRegular from '../../assets/currency-dollar-regular.svg';
-import { useTransactions } from '../../hooks/useTransactions';
+import { Transaction, useTransactions } from '../../hooks/useTransactions';
 
 export function Summary() {
   const { transactions } = useTransactions();
