@@ -47,7 +47,7 @@ export function TransactionsTable() {
                 .includes(searchForTransaction.toLowerCase())
             )
             .map((transaction) => (
-              <tr key={transaction.id}>
+              <tr key={transaction._id}>
                 <td>{transaction.title}</td>
                 <td className={transaction.type}>
                   {transaction.type === 'deposit' ? '' : '- '}
@@ -75,7 +75,7 @@ export function TransactionsTable() {
               .includes(searchForTransaction.toLowerCase())
           )
           .map((transaction) => (
-            <div key={transaction.id}>
+            <div key={transaction._id}>
               <h1>{transaction.title}</h1>
               <span className={transaction.type}>
                 {transaction.type === 'deposit' ? '' : '- '}

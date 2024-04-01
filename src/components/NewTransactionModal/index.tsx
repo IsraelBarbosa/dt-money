@@ -6,10 +6,8 @@ import xClose from '../../assets/x-regular.svg';
 import arrowCircleUpRegular from '../../assets/arrow-circle-up-regular.svg';
 import arrowCircleDownRegular from '../../assets/arrow-circle-down-regular.svg';
 
-
 import { Container, TransactionTypeContainer, RadioBox } from './styles';
 import './styles.css';
-
 
 interface NewTransactionModalProps {
   isOpen: boolean;
@@ -26,9 +24,11 @@ export function NewTransactionModal({
   const [amount, setAmount] = useState(0);
   const [category, setCategory] = useState('');
   const [type, setType] = useState('deposit');
+  const [isSubmittingTransaction, setIsSubmittingTransaction] = useState(false);
 
   async function handleCreateNewTransaction(event: FormEvent) {
     event.preventDefault();
+    setIsSubmittingTransaction(true);
 
     await createTransaction({
       title,
@@ -42,6 +42,9 @@ export function NewTransactionModal({
     setCategory('');
     setType('deposit');
     onRequestClose();
+    setTimeout(() => {
+      setIsSubmittingTransaction(false);
+    }, 300);
   }
 
   return (
@@ -109,7 +112,9 @@ export function NewTransactionModal({
           </RadioBox>
         </TransactionTypeContainer>
 
-        <button type="submit">Cadastrar</button>
+        <button type="submit" disabled={isSubmittingTransaction}>
+          Cadastrar
+        </button>
       </Container>
     </Modal>
   );

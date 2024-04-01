@@ -51,7 +51,8 @@ Inicie o servidor
 * Utilizar o context api
 * Utilizar um hook customizado
 * Utilizar o axios
-* Api mocking com o miragejs
+* Serverless functions com netlify
+* Utilizar o mongodb
 * Utilizar o styled-components
 * Uso da unidade de medida REM
 
