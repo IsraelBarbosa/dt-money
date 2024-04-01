@@ -8,7 +8,7 @@ Com ele, você pode facilmente registrar e acompanhar todas as suas transações
 
 ## Veja esse projeto online
 
-[DtMoney no netlify](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+[DtMoney no netlify](https://660af7f74faef80007c2e020--dt-money4574.netlify.app/)
 
 
 ## Rodando localmente
